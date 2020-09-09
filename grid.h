@@ -23,9 +23,11 @@ class grid
         grid();
         
         //These functions sort an unsorted random grid
-        void bottom_up_sort();
+        void top_down_sort();
         void flip_grid();
+        void flip_rows();
         void row_sort();
+        void col_sort();
 
         void insert_point(int, int); //Takes point at input param 2 and puts it in input param 1
 

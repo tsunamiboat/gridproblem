@@ -84,7 +84,7 @@ int main(int argc, char** argv)
     // Algorithms to sort rows
     // First sort all points by lowest y value then calculate slope between first two points
     // Check slope between subsequent points and find the next point that is equal, this creates rows
-    in_grid.bottom_up_sort();
+    in_grid.top_down_sort();
     in_grid.row_sort();
 
     //Compute Alpha - Due to how rows are sorted above, expected values are from -45 to 0 and 0 to 45
@@ -107,11 +107,11 @@ int main(int argc, char** argv)
     }
 
     // Flip all points about y=x and resort for columns
-    in_grid.flip_grid();
-    in_grid.bottom_up_sort();
-    in_grid.row_sort();
-    in_grid.flip_grid();
-
+    // in_grid.flip_grid();
+    // in_grid.top_down_sort();
+    // in_grid.row_sort();
+    // in_grid.flip_grid();
+    in_grid.col_sort();
 
 
     for (int i = 0; i < grid_size; i++)
